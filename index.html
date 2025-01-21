@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Project Documentation</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#contribute">Contribute</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="project-overview">
+            <h2>Project Overview</h2>
+            <p><strong>Study Circle</strong> is a collaborative platform built using the <strong>MERN (MongoDB, Express, React, Node)</strong> stack. It aims to facilitate learning and collaboration between students, mentors, and enthusiasts by providing features like discussion forums, resource sharing, study groups, and live chat.</p>
+            <h3>Key Features:</h3>
+            <ul>
+                <li>User registration and profile management</li>
+                <li>Discussion forums and chat rooms</li>
+                <li>Resource sharing (files, documents, links)</li>
+                <li>Group formation and management</li>
+                <li>Quiz and assignment tracking</li>
+                <li>Event scheduling and notifications</li>
+            </ul>
+        </section>
+
+
+        <section id="table-of-contents">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><a href="#user-documentation">User Documentation</a></li>
+                <li><a href="#developer-documentation">Developer Documentation</a></li>
+                <li><a href="#admin-documentation">Admin Documentation</a></li>
+                <li><a href="#contributing">Contributing</a></li>
+                <li><a href="#license">License</a></li>
+            </ol>
+        </section>
+
+        <section id="user-documentation">
+            <h2>User Documentation</h2>
+
+            <h3>Overview</h3>
+            <p>As a user, you can:</p>
+            <ul>
+                <li>Register and log in to the platform.</li>
+                <li>Join or create study groups.</li>
+                <li>Participate in discussions and interact with group members.</li>
+                <li>Share and access learning resources.</li>
+                <li>Take quizzes and assignments.</li>
+                <li>Schedule and attend study events.</li>
+            </ul>
+
+            <h3>Registration & Login</h3>
+            <ol>
+                <li>Visit the homepage.</li>
+                <li>Click on <strong>Sign Up</strong> to create a new account or <strong>Log In</strong> if you already have an account.</li>
+                <li>Fill in the required information (username, email, password).</li>
+                <li>After successful login, you will be redirected to the dashboard.</li>
+            </ol>
+
+            <h3>Joining/Creating Groups</h3>
+            <ol>
+                <li>Navigate to the <strong>Study Groups</strong> section.</li>
+                <li>Browse available groups and click <strong>Join</strong> to become a member.</li>
+                <li>To create a new group, click on <strong>Create Group</strong>, give it a name, and define its purpose and rules.</li>
+            </ol>
+
+            <h3>Accessing Resources</h3>
+            <ul>
+                <li>Access shared resources through the <strong>Resources</strong> tab.</li>
+                <li>You can upload your own materials or download those shared by others.</li>
+            </ul>
+
+            <h3>Notifications</h3>
+            <p>Stay updated with new discussions, events, and quizzes through the <strong>Notifications</strong> panel.</p>
+        </section>
+
+        <section id="developer-documentation">
+            <h2>Developer Documentation</h2>
+
+            <h3>Project Setup</h3>
+
+            <h4>Prerequisites</h4>
+            <ul>
+                <li>Node.js (version 16 or later)</li>
+                <li>MongoDB (local or cloud)</li>
+            </ul>
+
+            <h4>Clone the Repository</h4>
+            <pre><code>git clone https://github.com/your-organization/study-circle.git
+cd study-circle</code></pre>
+
+            <h4>Backend Setup</h4>
+            <ol>
+                <li>Navigate to the backend directory.</li>
+                <li>Install dependencies:
+                    <pre><code>npm install</code></pre>
+                </li>
+                <li>Configure environment variables:
+                    <ul>
+                        <li><code>.env</code> file: Add your database URL and other API keys (e.g., for JWT, MongoDB).</li>
+                    </ul>
+                </li>
+                <li>Run the backend server:
+                    <pre><code>npm start</code></pre>
+                </li>
+            </ol>
+
+            <h4>Frontend Setup</h4>
+            <ol>
+                <li>Navigate to the frontend directory.</li>
+                <li>Install dependencies:
+                    <pre><code>npm install</code></pre>
+                </li>
+                <li>Run the frontend server:
+                    <pre><code>npm start</code></pre>
+                </li>
+            </ol>
+
+            <h4>API Documentation</h4>
+            <p>All the API endpoints are documented in the <code>backend/docs</code> directory. Key routes include:</p>
+            <ul>
+                <li><code>GET /api/user/dashboard</code>: Fetch the user's dashboard data.</li>
+                <li><code>POST /api/groups/create</code>: Create a new study group.</li>
+                <li><code>GET /api/groups/:id</code>: Retrieve details of a specific group.</li>
+            </ul>
+
+            <h4>Code Structure</h4>
+            <ul>
+                <li><strong>Backend (<code>/backend</code>)</strong>:
+                    <ul>
+                        <li><code>controllers/</code>: Contains logic for handling requests.</li>
+                        <li><code>models/</code>: Database schemas for MongoDB.</li>
+                        <li><code>routes/</code>: Defines the API endpoints.</li>
+                    </ul>
+                </li>
+                <li><strong>Frontend (<code>/frontend</code>)</strong>:
+                    <ul>
+                        <li><code>components/</code>: Reusable UI components.</li>
+                        <li><code>pages/</code>: Pages of the application.</li>
+                        <li><code>services/</code>: API calls and external interactions.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="admin-documentation">
+            <h2>Admin Documentation</h2>
+
+            <h3>Admin Dashboard</h3>
+            <p>The admin dashboard allows you to manage users, groups, resources, and monitor activities within the platform.</p>
+
+            <h4>Admin Features:</h4>
+            <ul>
+                <li><strong>User Management</strong>:
+                    <ul>
+                        <li>View all registered users.</li>
+                        <li>Promote users to admins or remove them from groups.</li>
+                        <li>Ban users or deactivate accounts.</li>
+                    </ul>
+                </li>
+                <li><strong>Group Management</strong>:
+                    <ul>
+                        <li>Approve or reject group creation requests.</li>
+                        <li>Manage group members (add, remove, promote).</li>
+                    </ul>
+                </li>
+                <li><strong>Event Management</strong>:
+                    <ul>
+                        <li>Schedule and manage study events.</li>
+                        <li>Notify users about upcoming events.</li>
+                    </ul>
+                </li>
+                <li><strong>Content Moderation</strong>:
+                    <ul>
+                        <li>Review flagged content (e.g., inappropriate messages or resources).</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Accessing the Admin Panel</h3>
+            <ol>
+                <li>Log in as an admin.</li>
+                <li>Navigate to the <strong>Admin Dashboard</strong>.</li>
+                <li>Use the sidebar to access different management sections.</li>
+            </ol>
+        </section>
+
+        <section id="contributing">
+            <h2>Contributing</h2>
+
+            <p>We welcome contributions to the Study Circle project! Whether you’re fixing bugs, improving documentation, or adding new features, your help is appreciated.</p>
+
+            <h3>How to Contribute:</h3>
+            <ol>
+                <li>Fork the repository.</li>
+                <li>Create a new branch for your feature or bug fix.</li>
+                <li>Make your changes and commit them.</li>
+                <li>Open a pull request describing your changes.</li>
+            </ol>
+
+            <p>Please follow the code style and ensure that all new code is well-tested.</p>
+        </section>
+
+        <section>
+
+    <h1>📚✨ Study Circle</h1>
+    <p><strong>Study Circle</strong> is a 🤝 collaborative platform designed to help 👨‍🎓 students and 👩‍🏫 educators create, join, and manage study groups. Built using the 🌐 MERN stack (🗄️ MongoDB, 🛤️ Express.js, ⚛️ React, 🟢 Node.js), it provides tools for effective 💬 communication, 📂 resource sharing, and 📈 progress tracking.</p>
+
+    <hr>
+
+    <h2>⭐ Features</h2>
+    <h3>👥 User Management</h3>
+    <ul>
+        <li>🔒 Secure user authentication and role-based access (👨‍🎓 students, 👩‍🏫 educators, 👨‍💼 admins).</li>
+        <li>✍️ Account creation and 🖼️ profile management.</li>
+    </ul>
+
+    <h3>👨‍👩‍👧‍👦 Study Groups</h3>
+    <ul>
+        <li>➕ Create and 🛠️ manage study groups.</li>
+        <li>➡️ Join groups via 🔗 invitations or 🔢 group codes.</li>
+        <li>Assign group roles (e.g., 👑 moderators).</li>
+    </ul>
+
+    <h3>📤 Resource Sharing</h3>
+    <ul>
+        <li>📄 Upload and share study materials (📚 PDFs, 🖼️ images, etc.).</li>
+        <li>🏷️ Organize resources by topics and tags.</li>
+    </ul>
+
+    <h3>📅 Event Scheduling</h3>
+    <ul>
+        <li>📌 Schedule study sessions or group events.</li>
+        <li>🗓️ Event calendar with ⏰ reminders.</li>
+    </ul>
+
+    <h3>💬 Communication</h3>
+    <ul>
+        <li>🔴 Real-time chat for group discussions.</li>
+        <li>🧵 Discussion threads for topic-specific conversations.</li>
+    </ul>
+
+    <h3>📊 Progress Tracking</h3>
+    <ul>
+        <li>👀 Monitor member activity in groups.</li>
+        <li>📈 Group statistics and progress reports.</li>
+    </ul>
+
+    <hr>
+
+    <h2>🛠️ Tech Stack</h2>
+    <ul>
+        <li><strong>Frontend</strong>: ⚛️ React, 🔄 Redux/Context API, 🔌 Axios, 🎨 Material-UI/TailwindCSS</li>
+        <li><strong>Backend</strong>: 🟢 Node.js, 🛤️ Express.js, 🔒 JWT for authentication</li>
+        <li><strong>Database</strong>: 🗄️ MongoDB (☁️ MongoDB Atlas for cloud hosting)</li>
+        <li><strong>Testing</strong>: 🧪 Jest, ⚛️ React Testing Library, 🛡️ Mocha, ⚖️ Chai</li>
+        <li><strong>Deployment</strong>: 🚀 Vercel/Netlify (Frontend), 🛠️ Heroku/Render (Backend)</li>
+    </ul>
+
+    <hr>
+
+    <h2>⚙️ Installation and Setup</h2>
+    <h3>📋 Prerequisites</h3>
+    <ul>
+        <li><a href="https://nodejs.org/">🟢 Node.js</a> and npm installed</li>
+        <li><a href="https://www.mongodb.com/">🗄️ MongoDB</a> or ☁️ MongoDB Atlas account</li>
+    </ul>
+
+    <h3>⬇️ Clone the Repository</h3>
+    <pre>
+git clone https://github.com/your-username/study-circle.git
+cd study-circle
+    </pre>
+
+    <h3>⚛️ Frontend Setup</h3>
+    <ol>
+        <li>Navigate to the frontend folder:
+            <pre>cd frontend</pre>
+        </li>
+        <li>Install dependencies:
+            <pre>npm install</pre>
+        </li>
+        <li>Start the development server:
+            <pre>npm start</pre>
+        </li>
+    </ol>
+
+    <h3>🛤️ Backend Setup</h3>
+    <ol>
+        <li>Navigate to the backend folder:
+            <pre>cd backend</pre>
+        </li>
+        <li>Install dependencies:
+            <pre>npm install</pre>
+        </li>
+        <li>Configure environment variables:
+            <ul>
+                <li>Create a <code>.env</code> file with the following:</li>
+                <pre>
+PORT=5000
+MONGO_URI=<your_mongo_connection_string>
+JWT_SECRET=<your_secret_key>
+                </pre>
+            </ul>
+        </li>
+        <li>Start the backend server:
+            <pre>npm start</pre>
+        </li>
+    </ol>
+
+    <h3>▶️ Running the Application</h3>
+    <ul>
+        <li>Open <a href="http://localhost:3000">http://localhost:3000</a> for the ⚛️ frontend.</li>
+        <li>Backend runs on <a href="http://localhost:5000">http://localhost:5000</a>.</li>
+    </ul>
+
+    <hr>
+
+    <h2>🗂️ Folder Structure</h2>
+    <pre>
+study-circle/
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   └── package.json
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│   ├── utils/
+│   └── package.json
+├── README.md
+└── .gitignore
+    </pre>
+
+    <hr>
+
+    <h2>🤝 Contribution Guidelines</h2>
+    <ol>
+        <li>🍴 Fork the repository and clone it locally.</li>
+        <li>Create a new branch for your feature:
+            <pre>git checkout -b feature/your-feature-name</pre>
+        </li>
+        <li>📌 Commit your changes:
+            <pre>git commit -m "Add your feature description"</pre>
+        </li>
+        <li>⬆️ Push to your branch:
+            <pre>git push origin feature/your-feature-name</pre>
+        </li>
+        <li>📤 Create a pull request and describe your changes.</li>
+    </ol>
+
+    <hr>
+
+    <h2>📜 License</h2>
+    <p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
+
+    <hr>
+
+    <h2>📞 Contact</h2>
+    <p>For questions or support, please contact:</p>
+    <ul>
+        <li><strong>Name</strong>: Your Name</li>
+        <li><strong>Email</strong>: your.email@example.com</li>
+        <li><strong>GitHub</strong>: <a href="https://github.com/your-username">https://github.com/your-username</a></li>
+    </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Project Name. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
