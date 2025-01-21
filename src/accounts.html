@@ -1,0 +1,168 @@
+<body>
+  <h1><strong>Study Circle - Accounts Section Documentation</strong> 📚 </h1>
+
+  <section>
+    <h2>Overview</h2>
+    <p>The Accounts tab in the Study Circle platform provides users with the ability to create and manage their profiles. It allows for secure authentication and role-based access for students, teachers, heads of departments (HOD), librarians, colleges, and universities. Below are the key sections within the Accounts tab:</p>
+
+  </section>
+
+  <section id="home">
+    <h2>1. Home</h2>
+    <p>The "Home" section navigates to the main home page of the study circle.</p>
+  </section>
+
+  <section>
+    <h2>2. Login</h2>
+    <p>The login section is where existing users can sign in to access the platform.</p>
+  
+    <h3>Login Form (Sign In)</h3>
+    <ul>
+        <li><strong>Username/Email:</strong> The user inputs their registered email or username.</li>
+        <li><strong>Password:</strong> The user enters their password for authentication.</li>
+        <li><strong>Forgot Password:</strong> A link to reset the password if the user has forgotten it.</li>
+        <li><strong>Sign In Button:</strong> A button to submit the login form and authenticate the user.</li>
+    </ul>
+    <p>Upon successful login, the user is directed to their respective dashboard based on their role.</p>
+
+  </section>
+
+  <h2>3. New Account</h2>
+  <p>The "New Account" section allows new users to create an account on the platform. The sign-up process includes providing necessary details and selecting their role.</p>
+
+  <h3>New Account Form (Sign Up)</h3>
+  <ul>
+      <li><strong>Name:</strong> The user’s full name.</li>
+      <li><strong>Email:</strong> A valid email address for communication and account verification.</li>
+      <li><strong>Username:</strong> A unique username for logging into the platform.</li>
+      <li><strong>Password:</strong> A password for securing the account.</li>
+      <li><strong>Confirm Password:</strong> A confirmation input to ensure the correct password is entered.</li>
+      <li><strong>Role Selection:</strong> The user selects their role (student, teacher, HOD, librarian, etc.) from a dropdown list or radio buttons.</li>
+      <li><strong>Submit Button:</strong> A button to submit the form and create the account.</li>
+  </ul>
+  <p>Upon successful submission, the user is either logged in directly or redirected to the login page to sign in.</p>
+
+  <h2>4. Sections</h2>
+  <p>The <strong>Sections</strong> in the account management section define the roles that a user can choose during the registration process. Each role has different permissions and access rights within the platform:</p>
+
+  <h3>Student</h3>
+  <p>Students have access to study groups, resources, and event scheduling. They can join groups, participate in discussions, and track their progress.</p>
+
+  <h3>Teacher</h3>
+  <p>Teachers can create and manage study groups, upload resources, and create events. They can also monitor student progress and provide feedback.</p>
+
+  <h3>HOD (Head of Department)</h3>
+  <p>HODs have higher-level administrative access within their department. They can manage teacher and student accounts, approve study group requests, and oversee academic activities.</p>
+
+  <h3>Librarian</h3>
+  <p>Librarians can manage the resources section, upload and organize study materials, and ensure resources are up to date for all users.</p>
+
+  <h3>College</h3>
+  <p>College administrators manage accounts for the college and oversee student and faculty activities. They can manage college-wide events, resources, and user roles.</p>
+
+  <h3>University</h3>
+  <p>University admins have the highest level of access. They can manage accounts at the college, department, and user levels, ensuring smooth operations across the institution.</p>
+
+  <h2>Workflow and Access</h2>
+  <ol>
+      <li><strong>Sign Up Flow:</strong> New users fill out the sign-up form and select a role. The account is created, and the user is authenticated.</li>
+      <li><strong>Login Flow:</strong> Returning users input their credentials (email/username and password) and gain access based on their role.</li>
+      <li><strong>Role-Specific Features:</strong> Upon login, the user is directed to the appropriate dashboard with features and access relevant to their role. For example, students see study group recommendations, while teachers see group management tools.</li>
+  </ol>
+
+  <h2>Security</h2>
+  <ul>
+      <li><strong>Password Hashing:</strong> Passwords are securely hashed before being stored in the database.</li>
+      <li><strong>JWT Authentication:</strong> JSON Web Tokens (JWT) are used for secure authentication and session management.</li>
+      <li><strong>Role-Based Access Control (RBAC):</strong> The platform ensures that users only have access to features relevant to their assigned role.</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>The Accounts section of Study Circle offers a streamlined process for users to register, log in, and manage their profiles, while ensuring secure access based on user roles. Each role (student, teacher, HOD, librarian, college, university) has distinct features and permissions, allowing for efficient management of study groups, resources, and academic activities.</p>
+
+
+
+    <main>
+
+        <section id="login">
+            <h2>Login</h2>
+            <p>The "Login" section provides a form for common users to sign in to the study circle. This allows users to access their accounts and the platform's features.</p>
+        </section>
+
+        <section id="new-account">
+            <h2>New Account</h2>
+            <p>The "New Account" section provides a form for creating a new user account. This allows common users to sign up and become members of the study circle.</p>
+        </section>
+
+        <section id="sections">
+            <h2>Sections</h2>
+            <p>The "Sections" section includes different forms for logging in based on roles within the study circle. Each role has its own form with specific inputs.</p>
+            
+            <div>
+                <h3>Student</h3>
+                <p>The student login form requires the following inputs:</p>
+                <ul>
+                    <li>Username</li>
+                    <li>Student ID</li>
+                    <li>Password</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Teacher</h3>
+                <p>The teacher login form requires the following inputs:</p>
+                <ul>
+                    <li>Username</li>
+                    <li>Teacher ID</li>
+                    <li>Password</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Department</h3>
+                <p>The department login form requires the following inputs:</p>
+                <ul>
+                    <li>Username</li>
+                    <li>Department ID</li>
+                    <li>Password</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Librarian</h3>
+                <p>The librarian login form requires the following inputs:</p>
+                <ul>
+                    <li>Username</li>
+                    <li>Librarian ID</li>
+                    <li>Password</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>College</h3>
+                <p>The college login form requires the following inputs:</p>
+                <ul>
+                    <li>Username</li>
+                    <li>College ID</li>
+                    <li>Password</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>University</h3>
+                <p>The university login form requires the following inputs:</p>
+                <ul>
+                    <li>Username</li>
+                    <li>University ID</li>
+                    <li>Password</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Study Circle. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
